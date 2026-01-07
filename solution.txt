@@ -1,2 +1,11 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+Solution Description:
+This solution generates all consecutive substrings of a given string using nested loops.
+- The outer loop selects the starting index of the substring.
+- The inner loop selects the ending index and slices the string.
+- Each substring is collected in an array and returned.
+
+Time Complexity:
+O(n^2) because the number of substrings grows quadratically with the length of the input string.
+
+Space Complexity:
+O(n^2) because all substrings are stored in an array.
