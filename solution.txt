@@ -1,11 +1,24 @@
-Solution Description:
-This solution generates all consecutive substrings of a given string using nested loops.
-- The outer loop selects the starting index of the substring.
-- The inner loop selects the ending index and slices the string.
-- Each substring is collected in an array and returned.
+SOLUTION DESCRIPTION:
+This solution uses a nested loop approach to generate all consecutive substrings.
 
-Time Complexity:
-O(n^2) because the number of substrings grows quadratically with the length of the input string.
+HOW IT WORKS:
+1. We iterate through each possible starting position in the string (outer loop)
+2. For each starting position, we iterate through all possible ending positions (inner loop)
+3. We extract the substring from the start to end position using slice()
+4. We add each substring to our result array
+5. The substrings are naturally ordered as they appear in the original string
 
-Space Complexity:
-O(n^2) because all substrings are stored in an array.
+ALGORITHM TYPE:
+Brute force approach with nested iteration
+
+TIME COMPLEXITY: O(n²)
+- The outer loop runs n times (where n is the string length)
+- The inner loop runs approximately n times on average
+- This gives us n * n = n² operations
+- Note: If we count the substring extraction operation, it could be O(n³), 
+  but the dominant factor is the nested loop structure at O(n²)
+
+SPACE COMPLEXITY: O(n²)
+- We store all substrings in the result array
+- For a string of length n, there are n(n+1)/2 substrings
+- This simplifies to O(n²) space
